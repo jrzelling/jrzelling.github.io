@@ -1,5 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Advent+Pro:100);
 
+.fa-star,.fa-star-half-o {
+    color:#FC6
+}
+
+.price{
+    color:#2196f3;
+    position:relative;
+    text-align:right
+}
+
 body,
 html {
     width: 100%;
