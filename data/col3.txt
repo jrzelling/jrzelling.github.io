@@ -6,6 +6,7 @@ img\Certs\fanuco_cert-sm.png
 img\Certs\fanucp_cert-sm.png
 img\Certs\firstaid_cert-sm.PNG
 img\Certs\forklift_cert-sm.PNG
+img\Certs\ind_cert-sm.png
 img\Certs\industrial_cert-sm.PNG
 img\Certs\leanmfg_cert-sm.PNG
 img\Certs\lsceu_cert-sm.PNG
