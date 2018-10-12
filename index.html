@@ -1,113 +1,154 @@
 <!DOCTYPE html>
 <html lang="en" class="index">
+<title>syecom</title>
 
-<head>
+<!-- Hotjar Tracking Code for syecom.com -->
+<script>
+(function(h,o,t,j,a,r){
+h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+h._hjSettings={hjid:390251,hjsv:5};
+a=o.getElementsByTagName('head')[0];
+r=o.createElement('script');r.async=1;
+r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+a.appendChild(r);
+})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<style>
+.text-muted { color: #777; }
+.small { font-size: 85%; }
+</style>
 
-  <title>jrzelling</title>
+<script type="text/processing" data-processing-target="processing-canvas">
 
-  <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link href="css/styles.css" rel="stylesheet">
-  <!-- Custom Fonts -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+PImage a;
+PImage b;
+PImage c;
+PImage d;
+PImage e;
+PImage f;
 
-  <!-- Hotjar Tracking Code for syecom.com -->
-  <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:390251,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
+void setup() {
+/* @pjs preload="Windows_logo-sm.png, Ubuntu_logo-sm.png, Mac_logo-sm.png, Android_logo-sm.png, Unix_logo-sm.png, Chrome_logo-sm.png"; */
 
-</head>
+//scale canvas to percentage of screen size
+sclx = 0.68;
+scly = 0.85;
+size(screen.width*sclx, screen.height*scly);
+imageMode(CORNER);
+rectMode(CORNER);
+noCursor();
 
-<body>
+a = loadImage("Windows_logo-sm.png");
+b = loadImage("Ubuntu_logo-sm.png");
+c = loadImage("Mac_logo-sm.png");
+d = loadImage("Android_logo-sm.png");
+e = loadImage("Unix_logo-sm.png");
+f = loadImage("Chrome_logo-sm.png");
 
-	<!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
+}
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>Candidate Page</h1>
-                        <h3>Connect with me</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="resume.html" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-database fa-fw"></i> <span class="network-name">Resume</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/jrzelling" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/johnryanzelling" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="http://jryanzelling.blogspot.com/?view=mosaic" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-camera-retro fa-fw"></i> <span class="network-name">Art Showcase</span></a>
-                            </li>
-                            <li>
-                            </li>
-                            <li><a href="mailto:jryanzelling@gmail.com?Subject=Request%20for%20meeting" target="_top" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">jryanzelling@gmail.com</span></a></li>
-                        </ul>
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://plus.google.com/u/0/+johnryanzelling" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google Plus</span></a>
-                            </li>
-                            <li>
-                                <a href="https://www.etsy.com/shop/ArtesinalNatural?ref=hdr_shop_menu" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-etsy"></i> <span class="network-name">Etsy</span></a>
-                            </li>
-                            <li>
-                                <a href="http://backpackhealing.blogspot.com/" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-plane"></i> <span class="network-name">Travel Log</span></a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/user/jrzelling" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-youtube"></i> <span class="network-name">Youtube Channel</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+void draw() {
 
-        </div>
-        <!-- /.container -->
+frameRate(60);
+float m = millis();
+lrx = screen.width*sclx;
+lry = screen.height*scly;
 
-    </div>
-    <!-- /.intro-header -->
+//background(100);
+stroke(0);
 
-	<!-- Footer -->
-  <footer>
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                  <p class="copyright text-muted small">
-                  Syecom &copy;
-                  </p>
-              </div>
-          </div>
-      </div>
-  </footer>
+//left box
+ULx = 0.05*lrx;
+ULy = 0.15*lry;
+LRx = ULx + 0.20*lrx;
+LRy = ULy + 0.60*lry;
+fill(55);
+beginShape();
+vertex(ULx, ULy);
+vertex(LRx, ULy);
+vertex(LRx, LRy);
+vertex(ULx, LRy);
+vertex(ULx, ULy);
+endShape();
 
-  <!-- jQuery -->
-  <script src="js/jquery.js"></script>
+//tech skills
+fill(255);
 
-  <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
+TULx = ULx + 50;
+TULy = ULy + 25;
 
-</body>
+text("Technical Skills", TULx, TULy);
+text("System Administration", TULx, TULy + 25);
 
-</html>
+text("Windows", TULx, TULy + 50);
+image(a, TULx - 30, TULy + 35, 20, 20);
+
+text("Ubuntu", TULx, TULy + 75);
+image(b, TULx - 30, TULy + 60, 20, 20);
+
+text("Mac OS", TULx, TULy + 100);
+image(c, TULx - 30, TULy + 85, 20, 20);
+
+text("Android", TULx, TULy + 125);
+image(d, TULx - 30, TULy + 110, 20, 20);
+
+text("Unix", TULx, TULy + 150);
+image(e, TULx - 30, TULy + 135, 20, 20);
+
+text("Chrome OS", TULx, TULy + 175);
+image(f, TULx - 30, TULy + 160, 20, 20);
+
+
+//footer
+lrxf = 0+0.05*lrx+0.90*lrx;
+lryf = 0+0.77*lry+0.18*lry;
+fill(125);
+rect(0+0.05*lrx, 0+0.77*lry, 0.90*lrx, 0.18*lry);
+fill(255);
+text("MouseX: "+mouseX, lrxf-0.15*lrxf, lryf-85);
+text("MouseY: "+mouseY, lrxf-0.15*lrxf, lryf-70);
+text("Time: "+m/1000+" sec", lrxf-0.15*lrxf, lryf-55);
+text("FrameCount: "+frameCount+" frames", lrxf-0.15*lrxf, lryf-40);
+text("CanvasWidth: "+screen.width*.6, lrxf-0.15*lrxf, lryf-25);
+text("CanvasHeight: "+screen.height*.85, lrxf-0.15*lrxf, lryf-10);
+
+//cursor
+strokeWeight(1);
+line(mouseX-50, mouseY, mouseX+50, mouseY);
+line(mouseX, mouseY-50, mouseX, mouseY+50);
+
+}
+
+</script>
+
+<!--
+<script>
+document.write('<div class="container">');
+document.write('<h1>Technical Skills</h1>');
+document.write('<dl class="lead">');
+
+document.write('<dd class="chip teal lighten-1">System Administration</dd>');
+document.write('<dd class="chip"><img src="img/Windows_logo-sm.png">Windows</dd>');
+document.write('<dd class="chip"><img src="img/Ubuntu_logo-sm.png">Ubuntu</dd>');
+document.write('<dd class="chip"><img src="img/Mac_logo-sm.png">Mac OS</dd>');
+document.write('<dd class="chip"><img src="img/Android_logo-sm.png">Android</dd>');
+document.write('<dd class="chip"><img src="img/Unix_logo-sm.png">Unix</dd>');
+document.write('<dd class="chip"><img src="img/Chrome_logo-sm.png">Chrome OS</dd>');
+</script>
+-->
+<canvas id="processing-canvas"></canvas>
+
+<!-- Footer -->
+<script>
+document.write('<footer>');
+document.write('<p class="copyright text-muted small">');
+document.write('Syecom &copy;');
+document.write('</p>');
+document.write('</footer>');
+</script>
+
+<script src="js/processing.min.js"></script>
+
+
+<!--Access to Medical Records, Back Safety, Basic Orientation, Behavioral Based Safety, Bloodborne Pathogens, Communication, Control of Hazardous Energy, Core Compliance 2012, Core Compliance 2016, DOT HazMat General Familiarization, Drug and Alcohol, Electrical Safety, Emergency Response, Excavation and Trenching Safety, Fall Protection, Fire Safety, First Aid, Global Harmonized Sys & Hazard Communication, H2S Clear 4-Hour End User, Hand Safety, Hazard Communication (HAZCOM), Hazard Identification, HazWoper Operations, Hearing Conservation, Housekeeping, Hydrogen Sulfide (H2S), Incident Investigation, Incident Reporting, Introduction To Safety, Job Safety Analysis Training, Marine Trash and Debris, Motor Vehicle Safety, Occupational Health Hazards, Office Safety, Offshore Safety, OSHA Record Keeping, Permit Required Confined Space, Personal Protective Equipment, Powered Industrial Truck (Forklift), Process Safety Management (PSM), Respiratory Protection, Rigging Safety, Scaffolding Safety, SEMS II Training- Offshore Oilfield Employees, Short Service Employees, Stop Work Authority, Terrorist Response Program (TRAP), Walking Working Surfaces & Elevated Work, Welding, Cutting, and Brazing, Work Permits, Workplace Violence, SafeGulf Orientation, SafeLand Orientation, Software Quality Assurance; Web Technology; Java Programmer; AutoCAD Civil 3D; Autodesk Revit Programmer, FANUC Robot Programmer.-->
