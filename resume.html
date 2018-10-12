@@ -1,128 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" class="index">
-<title>syecom</title>
+<html lang="en" class="resume">
 
-<!-- Hotjar Tracking Code for syecom.com -->
-<script>
-(function(h,o,t,j,a,r){
-h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-h._hjSettings={hjid:390251,hjsv:5};
-a=o.getElementsByTagName('head')[0];
-r=o.createElement('script');r.async=1;
-r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-a.appendChild(r);
-})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+<head>
 
-<style>
-.text-muted { color: #777; }
-.small { font-size: 85%; }
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<script type="text/processing" data-processing-target="processing-canvas">
+    <title>jrzelling</title>
 
-PImage a;
-PImage b;
-PImage c;
-PImage d;
-PImage e;
-PImage f;
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-void setup() {
-/* @pjs preload="Windows_logo-sm.png, Ubuntu_logo-sm.png, Mac_logo-sm.png, Android_logo-sm.png, Unix_logo-sm.png, Chrome_logo-sm.png"; */
+    <!-- Hotjar Tracking Code for syecom.com -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:390251,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
 
-//scale canvas to percentage of screen size
-sclx = 0.68;
-scly = 0.85;
-size(screen.width*sclx, screen.height*scly);
-imageMode(CORNER);
-rectMode(CORNER);
-noCursor();
+<body>
 
-a = loadImage("Windows_logo-sm.png");
-b = loadImage("Ubuntu_logo-sm.png");
-c = loadImage("Mac_logo-sm.png");
-d = loadImage("Android_logo-sm.png");
-e = loadImage("Unix_logo-sm.png");
-f = loadImage("Chrome_logo-sm.png");
-
-}
-
-void draw() {
-
-frameRate(60);
-float m = millis();
-lrx = screen.width*sclx;
-lry = screen.height*scly;
-
-//background(100);
-stroke(0);
-
-//left box
-ULx = 0.05*lrx;
-ULy = 0.15*lry;
-LRx = ULx + 0.20*lrx;
-LRy = ULy + 0.60*lry;
-fill(55);
-beginShape();
-vertex(ULx, ULy);
-vertex(LRx, ULy);
-vertex(LRx, LRy);
-vertex(ULx, LRy);
-vertex(ULx, ULy);
-endShape();
-
-//tech skills
-fill(255);
-
-TULx = ULx + 50;
-TULy = ULy + 25;
-
-text("Technical Skills", TULx, TULy);
-text("System Administration", TULx, TULy + 25);
-
-text("Windows", TULx, TULy + 50);
-image(a, TULx - 30, TULy + 35, 20, 20);
-
-text("Ubuntu", TULx, TULy + 75);
-image(b, TULx - 30, TULy + 60, 20, 20);
-
-text("Mac OS", TULx, TULy + 100);
-image(c, TULx - 30, TULy + 85, 20, 20);
-
-text("Android", TULx, TULy + 125);
-image(d, TULx - 30, TULy + 110, 20, 20);
-
-text("Unix", TULx, TULy + 150);
-image(e, TULx - 30, TULy + 135, 20, 20);
-
-text("Chrome OS", TULx, TULy + 175);
-image(f, TULx - 30, TULy + 160, 20, 20);
-
-
-//footer
-lrxf = 0+0.05*lrx+0.90*lrx;
-lryf = 0+0.77*lry+0.18*lry;
-fill(125);
-rect(0+0.05*lrx, 0+0.77*lry, 0.90*lrx, 0.18*lry);
-fill(255);
-text("MouseX: "+mouseX, lrxf-0.15*lrxf, lryf-85);
-text("MouseY: "+mouseY, lrxf-0.15*lrxf, lryf-70);
-text("Time: "+m/1000+" sec", lrxf-0.15*lrxf, lryf-55);
-text("FrameCount: "+frameCount+" frames", lrxf-0.15*lrxf, lryf-40);
-text("CanvasWidth: "+screen.width*.6, lrxf-0.15*lrxf, lryf-25);
-text("CanvasHeight: "+screen.height*.85, lrxf-0.15*lrxf, lryf-10);
-
-//cursor
-strokeWeight(1);
-line(mouseX-50, mouseY, mouseX+50, mouseY);
-line(mouseX, mouseY-50, mouseX, mouseY+50);
-
-}
-
-</script>
-
-<!--
 <script>
 document.write('<div class="container">');
 document.write('<h1>Technical Skills</h1>');
@@ -135,20 +52,877 @@ document.write('<dd class="chip"><img src="img/Mac_logo-sm.png">Mac OS</dd>');
 document.write('<dd class="chip"><img src="img/Android_logo-sm.png">Android</dd>');
 document.write('<dd class="chip"><img src="img/Unix_logo-sm.png">Unix</dd>');
 document.write('<dd class="chip"><img src="img/Chrome_logo-sm.png">Chrome OS</dd>');
+
+document.write('<dd class="chip lime lighten-1">AutoCAD Design</dd>');
+document.write('<dd class="chip"><img src="img/acadrevit_logo-sm.png"/>Revit</dd>');
+document.write('<dd class="chip"><img src="img/acadelec_logo-sm.png"/>Electrical</dd>');
+document.write('<dd class="chip"><img src="img/acadc3d_logo-sm.png"/>Civil 3D</dd>');
+document.write('<dd class="chip"><img src="img/acad_logo-sm.png"/>AutoCad</dd>');
+document.write('<dd class="chip"><img src="img/solidworks_logo-sm.png"/>Solidworks</dd>');
+
+document.write('<dd class="chip light-green lighten-1">Graphic Design</dd>');
+document.write('<dd class="chip"><img src="img/cs6_logo-sm.png"/>Creative Suite 6</dd>');
+document.write('<dd class="chip"><img src="img/photoshop_logo-sm.png"/>Photoshop</dd>');
+document.write('<dd class="chip"><img src="img/illustrator_logo-sm.png"/>Illustrator</dd>');
+
+document.write('<dd class="chip orange lighten-1">Programming</dd>');
+document.write('<dd class="chip"><img src="img/Python_logo-sm.png"/>Python</dd>');
+document.write('<dd class="chip"><img src="img/Java_logo-sm.png"/>Java</dd>');
+document.write('<dd class="chip"><img src="img/cpp_logo-sm.png"/>C++</dd>');
+document.write('<dd class="chip"><img src="img/ruby_logo-sm.PNG"/>Ruby </dd>');
+document.write('<dd class="chip"><img src="img/rubyrails_logo-sm.png"/>Ruby on Rails</dd>');
+
+document.write('<dd class="chip light-blue lighten-1">Data Science</dd>');
+document.write('<dd class="chip"><img src="img/R_logo-sm.png"/>R Programming</dd>');
+document.write('<dd class="chip"><img src="img/RMarkdown_logo-sm.png"/>R Markdown</dd>');
+document.write('<dd class="chip"><img src="img/RStudio_logo-sm.png"/>R Studio</dd>');
+document.write('<dd class="chip"><img src="img/RShiny_logo-sm.png"/>R Shiny</dd>');
+document.write('<dd class="chip"><img src="img/SProxy_logo-sm.png"/>Shiny Proxy</dd>');
+document.write('<dd class="chip"><img src="img/graphviz_logo-sm.png"/>Graphviz</dd>');
+document.write('<dd class="chip"><img src="img/Mathematica_logo-sm.png"/>Mathematica</dd>');
+
+document.write('<dd class="chip cyan lighten-1">Mobile</dd>');
+document.write('<dd class="chip"><img src="img/AndroidStudio_logo-sm.png"/>Android Studio</dd>');
+document.write('<dd class="chip"><img src="img/dart_logo-sm.png"/>Dart</dd>');
+document.write('<dd class="chip"><img src="img/html_logo-sm.png"/>HTML</dd>');
+document.write('<dd class="chip"><img src="img/javascript_logo-sm.png"/>Javascript</dd>');
+document.write('<dd class="chip"><img src="img/css_logo-sm.png" alt="CSS"/>CSS</dd>');
+
+document.write('<dd class="chip blue lighten-1">Database Administration</dd>');
+document.write('<dd class="chip"><img src="img/mssql_logo-sm.png"/>MS SQL</dd>');
+document.write('<dd class="chip"><img src="img/mysql_logo-sm.png"/>MySQL</dd>');
+document.write('<dd class="chip"><img src="img/oraclesql_logo-sm.png"/>Oracle SQL</dd>');
+document.write('<dd class="chip"><img src="img/sqlite_logo-sm.png"/>SQLite</dd>');
+
+document.write('<dd class="chip pink lighten-1">Project Management</dd>');
+document.write('<dd class="chip"><img src="img/msword_logo-sm.png"/>MS Word</dd>');
+document.write('<dd class="chip"><img src="img/msexcel_logo-sm.png"/>MS Excel</dd>');
+document.write('<dd class="chip"><img src="img/mspowerpoint_logo-sm.png"/>MS PowerPoint</dd>');
+document.write('<dd class="chip"><img src="img/msproject_logo-sm.png"/>MS Project</dd>');
+
+document.write('<dd class="chip purple lighten-1">Industrial Automation</dd>');
+document.write('<dd class="chip"><img src="img/labview_logo-sm.png"/>LabView Programming</dd>');
+document.write('<dd class="chip"><img src="img/soldering_logo-sm.png"/>Soldering</dd>');
+document.write('<dd class="chip"><img src="img/3dprinting_logo-sm.png"/>3D Printing</dd>');
+document.write('<dd class="chip"><img src="img/drones_logo-sm.png"/>Aerial Drones</dd>');
+document.write('<dd class="chip"><img src="img/laserscanning_logo-sm.png"/>Laser Scanning</dd>');
+document.write('<dd class="chip"><img src="img/plc_logo-sm.png"/>PLC Programming</dd>');
+document.write('<dd class="chip"><img src="img/fanuc_logo-sm.png"/>Fanuc Programming</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>G-Code</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>CNC Programming</dd>');
+
+document.write('<dd class="chip red lighten-1">Artistic Craftwork</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Screen Printing</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Block Printing</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Shibori</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Painting on Fabric</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Sewing</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Weaving</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Blacksmithing</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Metalsmithing</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Welding</dd>');
+
+document.write('<dd class="chip indigo lighten-1">Software Quality Assurance</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Software Test Automation</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Selenium Training</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Software Quality Assurance</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Sofware Web Application Testing</dd>');
+document.write('<dd class="chip"><img src="https://placekitten.com/70/70"/>Black Box Testing</dd>');
+
+document.write('</dl>');
+document.write('</div>');
 </script>
--->
-<canvas id="processing-canvas"></canvas>
+
+
+
+    <div class="container">
+
+        <h1>Formal Training/Certifications</h1>
+
+        <!-- 1.0 -->
+        <div class="lead row">
+            <!-- 1.1 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/amteccarbonfiber_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Composite Manufacturing Training</h5>
+                        <h6 class="price-used"><i class="used">Roane State</i></h6>
+                        <h6 class="price-used"><i class="used">Oak Ridge, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>8/6/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 1.2 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/calsit_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>State of California Land Surveyor In Training Certificate</h5>
+                        <h6 class="price-used"><i class="used">State Board</i></h6>
+                        <h6 class="price-used"><i class="used">CA</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">CA BOE</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>3/1/2009</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 1.3 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/cctvip_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>ACMA Certified Composites Technician</h5>
+                        <h6 class="price-used"><i class="used">Roane State</i></h6>
+                        <h6 class="price-used"><i class="used">Oak Ridge, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>8/6/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2.0 -->
+        <div class="lead row">
+            <!-- 2.1 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/elecwiring_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Electrical Wiring and Maintenance (80 hours certification)</h5>
+                        <h6 class="price-used"><i class="used">Tennessee Technological Center</i></h6>
+                        <h6 class="price-used"><i class="used">Harriman, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">ACMA</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>1/10/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 2.2 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/fanucp_cert-sm.png"></div>
+                    <div class="card-content">
+                        <h5>Fanuc Robot Programming Certification</h5>
+                        <h6 class="price-used"><i class="used">Pellissippi State</i></h6>
+                        <h6 class="price-used"><i class="used">Knoxville, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">FANUC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>6/16/2015</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 2.3 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/fanuco_cert-sm.png"></div>
+                    <div class="card-content">
+                        <h5>Fanuc Robot Operations Certification</h5>
+                        <h6 class="price-used"><i class="used">Pellissippi State</i></h6>
+                        <h6 class="price-used"><i class="used">Knoxville, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">FANUC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>6/16/2015</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 3.0 -->
+        <div class="lead row">
+            <!-- 3.1 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/firstaid_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>First Aid CPR AED Certification</h5>
+                        <h6 class="price-used"><i class="used">Roane State</i></h6>
+                        <h6 class="price-used"><i class="used">Clinton, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>11/19/2013</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 3.2 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/forklift_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Forklift Operations Certification</h5>
+                        <h6 class="price-used"><i class="used">Pellissippi State</i></h6>
+                        <h6 class="price-used"><i class="used">Knoxville, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>5/17/2015</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 3.3 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/industrial_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>General Industrial Technician Certificate</h5>
+                        <h6 class="price-used"><i class="used">Roane State</i></h6>
+                        <h6 class="price-used"><i class="used">Oak Ridge, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>1/24/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 4.0 -->
+        <div class="lead row">
+            <!-- 4.1 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/leanmfg_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Lean Manufacturing Certification</h5>
+                        <h6 class="price-used"><i class="used">Roane State</i></h6>
+                        <h6 class="price-used"><i class="used">Clinton, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>1/31/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 4.2 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/lsceu_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Land Surveyor Continuing Education CEU</h5>
+                        <h6 class="price-used"><i class="used">Atlanta</i></h6>
+                        <h6 class="price-used"><i class="used">GA</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">PS REVIEW</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>4/9/2010</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 4.3 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/machining_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Basic Measuring and Machining (80 Hours Certificate)</h5>
+                        <h6 class="price-used"><i class="used">Tennessee Technological Center</i></h6>
+                        <h6 class="price-used"><i class="used">Harriman, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>1/10/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 5.0 -->
+        <div class="lead row">
+            <!-- 5.1 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/nvlsit_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>State of Nevada Land Surveyor In Training Certificate</h5>
+                        <h6 class="price-used"><i class="used">State Board</i></h6>
+                        <h6 class="price-used"><i class="used">NV</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">NV BOE</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>12/6/2006</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 5.2 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/osha_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>OSHA 30 Certification</h5>
+                        <h6 class="price-used"><i class="used">Roane State</i></h6>
+                        <h6 class="price-used"><i class="used">Clinton, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>10/31/2013</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 5.3 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/ovhcrane_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Overhead Crane Safety and Operation Certification</h5>
+                        <h6 class="price-used"><i class="used">Pellissippi State</i></h6>
+                        <h6 class="price-used"><i class="used">Knoxville, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>2/4/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6.0 -->
+        <div class="lead row">
+            <!-- 6.1 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/plumbing_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Basic Plumbing (40 hours certification)</h5>
+                        <h6 class="price-used"><i class="used">Tennessee Technological Center</i></h6>
+                        <h6 class="price-used"><i class="used">Harriman, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>1/10/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 6.2 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/quality_cert-sm.png"></div>
+                    <div class="card-content">
+                        <h5>Quality Assurance Training</h5>
+                        <h6 class="price-used"><i class="used">Roane State</i></h6>
+                        <h6 class="price-used"><i class="used">Clinton, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>1/24/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 6.3 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/rprog_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>R Programming Training Certification</h5>
+                        <h6 class="price-used"><i class="used">Coursera</i></h6>
+                        <h6 class="price-used"><i class="used">Coursera</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">Coursera</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>5/15/2015</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7.0 -->
+        <div class="lead row">
+            <!-- 7.1 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/solar_cert-sm.png"></div>
+                    <div class="card-content">
+                        <h5>Fundamentals of Solar/Energy Efficiency</h5>
+                        <h6 class="price-used"><i class="used">Roane State</i></h6>
+                        <h6 class="price-used"><i class="used">Clinton, TN</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">AMTEC</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>6/6/2014</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 7.2 -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image"><img src="img/Certs/webapps_cert-sm.PNG"></div>
+                    <div class="card-content">
+                        <h5>Web Applications Training Certification</h5>
+                        <h6 class="price-used"><i class="used">Coursera</i></h6>
+                        <h6 class="price-used"><i class="used">Coursera</i></h6>
+                    </div>
+                    <div class="card-action row">
+                        <span class="col s6">
+                            <span class="rating" title="5 Star!">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </span>
+                            <span class="reviews-no">Coursera</span>
+                        </span>
+                        <span class="col s6 price">
+                            <span>7/17/2011</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 7.3 -->
+        </div>
+
+        <h1>Professional Experience</h1>
+
+        <p><strong>Major Healthcare Corporation – Toledo, OH 07/2016 – 09/2016</strong></p>
+
+        <dl class="lead">
+            IT Security Analyst
+            <dd class="row">-Developed R/Shiny application for analyzing SQL tables and databases</dd>
+            <dd class="row">-Maintained dedicated Linux server to host Spring/Shiny web applications</dd>
+            <dd class="row">-Developed markdown documents to automate emailing reports and analyze/visualize data</dd>
+        </dl>
+
+        <p><strong>Freelance - Various Locations 01/2013 – Present</strong></p>
+
+        <dl class="lead">
+            Freelancer
+            <dd class="row">-Systems/Server administration Amazon EC2 Linux/Windows</dd>
+            <dd class="row">-HTML/CSS/javascript web application design and programming</dd>
+            <dd class="row">-Audio transcription automation for production company</dd>
+        </dl>
+
+        <p><strong>City of Palo Alto – Palo Alto, CA 01/2009 – 10/2012</strong></p>
+
+        <dl class="lead">
+            Surveying Assistant
+            <dd class="row">-Collected field data using GPS, processed data using Python and R Studio</dd>
+            <dd class="row">-Created heatmaps and Engineering drawings from raw field data using AutoCAD Civil 3D</dd>
+            <dd class="row">-Purchased and built truck-mounted RF boosting system for GPS data collection in remote areas</dd>
+            <dd class="row">-Managed accurately multiple data collection, construction staking, and design projects</dd>
+        </dl>
+
+        <p><strong>City of North Las Vegas – N Las Vegas, NV 06/2003 – 01/2009</strong></p>
+
+        <dl class="lead">
+            Survey Technician
+            <dd class="row">-Collected field data using conventional and GPS surveying methods for massive construction projects</dd>
+            <dd class="row">-Supported AutoCad and GIS integration projects during design phase in Engineering Design Group</dd>
+            <dd class="row">-Assured GIS system field-data-processing met quality standards between Survey and Design</dd>
+        </dl>
+    </div>
+
+
+
+<div class="container">
+
+    <h1>Education and Training</h1>
+
+    <dl class="lead">
+        <dt>Allegheny College – Meadville, PA 06/1995 - 12/1999</dt>
+        <dt>B.Sc. Mathematics</dt>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Varsity Tennis
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Dean's List
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Student Clubs
+        </dd>
+    </dl>
+
+    <dl class="lead">
+        <dt>Pellissippi State Comm College – Knoxville, TN 01/2015 - 06 / 2015</dt>
+        <dt>Certificate in Electrical Engineering Technology and Sustainability Education (3.8 GPA)</dt>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Data Acquisition">
+            Data Acquisition
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Sensors
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Robotics">
+            Robotics
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Soldering">
+            Soldering
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Industrial Automation">
+            Industrial Automation
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Computer Architecture">
+            Computer Architecture
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Electrical Engineering">
+            Electrical Engineering
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sustainability">
+            Sustainability
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="LEED GA">
+            LEED Green Associate
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Fanuc Certification">
+            Fanuc Certifications
+        </dd>
+    </dl>
+
+    <dl class="lead">
+        <dt>Tennessee Technological University School of Art and Design – Smithville, TN 06/2014 - 01/2015</dt>
+        <dt>Semester towards BFA Fibers and Metals (4.0 GPA)</dt>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Appalachian Center for Craft
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Cad Design
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Illustration
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Digital Graphic Design
+        </dd>
+    </dl>
+
+    <dl class="lead">
+        <dt>Roane State Community College - Clinton, TN 09/2013 - 09/2014</dt>
+        <dt>Advanced Manufacturing Technician Training (AMTEC)</dt>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Carbon Fiber Composites
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Glass Fiber Composites
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Kevlar Composites
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Woven Composites
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Nonwoven Composites
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Composites Manufacturing
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Composites Repair
+        </dd>
+    </dl>
+
+    <dl class="lead">
+        <dt>Roane State Community College - Oak Ridge National Lab, Oak Ridge, TN 09/2013 - 09/2014</dt>
+        <dt>Semester of Advanced Composites Training at Oak Ridge National Lab ORNL (3.5 GPA)</dt>
+    </dl>
+
+    <hr>
+
+    <dl class="lead">
+        <dt>National University - Online Masters Degree Program 01/2007 - 01/2012</dt>
+        <dt>58.5/60 Credits towards M. Sc. Systems Engineering (3.3 GPA)</dt>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Agile Development
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            Software Engineering Coursework
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            PMP Coursework
+        </dd>
+        <dd class="chip">
+            <img src="https://placekitten.com/70/70" alt="Sensors">
+            IEEE Membership
+        </dd>
+    </dl>
+
+    <dl class="lead">
+        <dt>College of Southern Nevada – Las Vegas, NV 01/2002 - 01/2007</dt>
+        <dt>Finished all courses towards A.A.S. Building Info Systems (3.3 GPA)</dt>
+    </dl>
+</div>
+
+<!-- VOLUNEER SECTION -->
+<script src="js/myVol.js"></script>
+<script>
+document.write('<div class="container">');
+document.write('<h1>Volunteer Work</h1>');
+document.write('<dl class="lead">');
+
+for (var i=0; i<myVol.length; i++) {
+  document.write('<dd class="row">' + myVol[i] + '</dd>');
+}
+
+document.write('</dl>')
+document.write('</div>')
+</script>
 
 <!-- Footer -->
 <script>
 document.write('<footer>');
+document.write('<div class="container">');
+document.write('<div class="row">');
+document.write('<div class="col-lg-12">');
 document.write('<p class="copyright text-muted small">');
 document.write('Syecom &copy;');
 document.write('</p>');
+document.write('</div>');
+document.write('</div>');
+document.write('</div>');
 document.write('</footer>');
 </script>
 
-<script src="js/processing.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
 
+</body>
 
-<!--Access to Medical Records, Back Safety, Basic Orientation, Behavioral Based Safety, Bloodborne Pathogens, Communication, Control of Hazardous Energy, Core Compliance 2012, Core Compliance 2016, DOT HazMat General Familiarization, Drug and Alcohol, Electrical Safety, Emergency Response, Excavation and Trenching Safety, Fall Protection, Fire Safety, First Aid, Global Harmonized Sys & Hazard Communication, H2S Clear 4-Hour End User, Hand Safety, Hazard Communication (HAZCOM), Hazard Identification, HazWoper Operations, Hearing Conservation, Housekeeping, Hydrogen Sulfide (H2S), Incident Investigation, Incident Reporting, Introduction To Safety, Job Safety Analysis Training, Marine Trash and Debris, Motor Vehicle Safety, Occupational Health Hazards, Office Safety, Offshore Safety, OSHA Record Keeping, Permit Required Confined Space, Personal Protective Equipment, Powered Industrial Truck (Forklift), Process Safety Management (PSM), Respiratory Protection, Rigging Safety, Scaffolding Safety, SEMS II Training- Offshore Oilfield Employees, Short Service Employees, Stop Work Authority, Terrorist Response Program (TRAP), Walking Working Surfaces & Elevated Work, Welding, Cutting, and Brazing, Work Permits, Workplace Violence, SafeGulf Orientation, SafeLand Orientation, Software Quality Assurance; Web Technology; Java Programmer; AutoCAD Civil 3D; Autodesk Revit Programmer, FANUC Robot Programmer.-->
+</html>
